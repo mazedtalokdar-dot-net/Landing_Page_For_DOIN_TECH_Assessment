@@ -1,88 +1,91 @@
 import Link from "next/link";
-import { Terminal, Globe, Code2, Share2, MessageSquare } from "lucide-react";
+import { BookOpen, Mail, Phone, MapPin, Code2, Globe, MessageSquare, Share2 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-800 bg-neutral-950 text-neutral-400">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand & Overview */}
+    <footer id="footer" className="bg-[#0F52FF] text-white border-t border-blue-600/40 pt-16 pb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-12 mb-12">
+          {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 p-0.5">
-                <div className="flex h-full w-full items-center justify-center rounded-[6px] bg-neutral-950">
-                  <Terminal className="h-4 w-4 text-indigo-400" />
-                </div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#CAFF00] text-[#0F52FF] shadow-lg">
+                <BookOpen className="h-6 w-6 stroke-[2.5]" />
               </div>
-              <span className="text-lg font-bold text-white tracking-tight">ByteSpace</span>
+              <span className="text-2xl font-black text-white tracking-tight">
+                Byte<span className="text-[#CAFF00]">Space</span>
+              </span>
             </Link>
-            <p className="text-sm text-neutral-400 max-w-sm">
-              Next-generation cloud development environments empowering teams to build, scale, and ship software faster than ever.
+            <p className="text-sm text-blue-100 max-w-sm font-medium leading-relaxed">
+              ByteSpace is a premier online learning platform providing top-tier professional courses, interactive tutorials, and industry certificates.
             </p>
 
-            {/* System Status Indicator */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-medium text-neutral-300">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>All Systems Operational</span>
+            <div className="space-y-2 text-xs font-semibold text-blue-100 pt-2">
+              <div className="flex items-center gap-2.5">
+                <MapPin className="h-4 w-4 text-[#CAFF00]" />
+                <span>123 Innovation Way, Tech City, USA</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="h-4 w-4 text-[#CAFF00]" />
+                <span>+1 (800) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Mail className="h-4 w-4 text-[#CAFF00]" />
+                <span>support@bytespace.com</span>
+              </div>
             </div>
           </div>
 
-          {/* Product Links */}
+          {/* Quick Links */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Product</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="#features" className="hover:text-white transition-colors">Features</Link></li>
-              <li><Link href="#solutions" className="hover:text-white transition-colors">Solutions</Link></li>
-              <li><Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/signup" className="hover:text-white transition-colors">Cloud Workspaces</Link></li>
-              <li><Link href="#faq" className="hover:text-white transition-colors">Documentation</Link></li>
+            <h3 className="text-sm font-black uppercase tracking-wider text-[#CAFF00]">Quick Links</h3>
+            <ul className="space-y-2.5 text-sm font-semibold text-blue-100">
+              <li><Link href="#" className="hover:text-[#CAFF00] transition-colors">About Us</Link></li>
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">Courses</Link></li>
+              <li><Link href="#why-us" className="hover:text-[#CAFF00] transition-colors">Why Choose Us</Link></li>
+              <li><Link href="#testimonials" className="hover:text-[#CAFF00] transition-colors">Testimonials</Link></li>
+              <li><Link href="/login" className="hover:text-[#CAFF00] transition-colors">Student Login</Link></li>
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Top Categories */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="#" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Press Kit</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Contact Us</Link></li>
+            <h3 className="text-sm font-black uppercase tracking-wider text-[#CAFF00]">Categories</h3>
+            <ul className="space-y-2.5 text-sm font-semibold text-blue-100">
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">Web Development</Link></li>
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">UI/UX Design</Link></li>
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">Digital Marketing</Link></li>
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">Data Science</Link></li>
+              <li><Link href="#courses" className="hover:text-[#CAFF00] transition-colors">Business Management</Link></li>
             </ul>
           </div>
 
-          {/* Legal Links */}
+          {/* Support */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Security Audit</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">GDPR Compliance</Link></li>
+            <h3 className="text-sm font-black uppercase tracking-wider text-[#CAFF00]">Support</h3>
+            <ul className="space-y-2.5 text-sm font-semibold text-blue-100">
+              <li><Link href="#" className="hover:text-[#CAFF00] transition-colors">Help Center / FAQ</Link></li>
+              <li><Link href="#" className="hover:text-[#CAFF00] transition-colors">Terms of Service</Link></li>
+              <li><Link href="#" className="hover:text-[#CAFF00] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-[#CAFF00] transition-colors">Refund Policy</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-500">
-            &copy; {new Date().getFullYear()} ByteSpace Inc. All rights reserved. Assessment for Doin Tech Limited.
-          </p>
-
-          <div className="flex items-center gap-4 text-neutral-400">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
+        <div className="pt-8 border-t border-blue-600/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-blue-100">
+          <p>&copy; {new Date().getFullYear()} ByteSpace E-Learning. Assessment for Doin Tech Limited.</p>
+          <div className="flex items-center gap-4">
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-[#CAFF00] transition-colors" aria-label="GitHub">
               <Code2 className="h-5 w-5" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="Twitter">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#CAFF00] transition-colors" aria-label="Twitter">
               <Globe className="h-5 w-5" />
             </a>
-            <a href="https://discord.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="Discord">
+            <a href="https://discord.com" target="_blank" rel="noreferrer" className="hover:text-[#CAFF00] transition-colors" aria-label="Discord">
               <MessageSquare className="h-5 w-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#CAFF00] transition-colors" aria-label="LinkedIn">
               <Share2 className="h-5 w-5" />
             </a>
           </div>

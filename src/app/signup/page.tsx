@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Terminal, Eye, EyeOff, Code2, ArrowLeft, Lock, Mail, User, Sparkles, CheckCircle2 } from "lucide-react";
+import { BookOpen, Eye, EyeOff, Code2, ArrowLeft, Lock, Mail, User, Sparkles, CheckCircle2 } from "lucide-react";
 
 const signupSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -68,15 +68,16 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[#0F52FF] text-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-purple-600/20 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-10 right-10 w-48 h-48 bg-[#CAFF00]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Back to Home Button */}
+      {/* Back Button */}
       <div className="absolute top-6 left-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#CAFF00] transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Back to Home</span>
@@ -85,29 +86,29 @@ export default function SignupPage() {
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
         <Link href="/" className="inline-flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 p-0.5 shadow-lg shadow-indigo-500/20">
-            <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-neutral-950">
-              <Terminal className="h-5 w-5 text-indigo-400" />
-            </div>
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#CAFF00] text-[#0F52FF] shadow-lg">
+            <BookOpen className="h-7 w-7 stroke-[2.5]" />
           </div>
-          <span className="text-2xl font-bold tracking-tight text-white">ByteSpace</span>
+          <span className="text-3xl font-black tracking-tight text-white">
+            Byte<span className="text-[#CAFF00]">Space</span>
+          </span>
         </Link>
 
-        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-          Create your free account
+        <h2 className="text-2xl sm:text-3xl font-black text-white">
+          Create Free Student Account
         </h2>
-        <p className="text-sm text-neutral-400">
-          Get 3 free cloud workspaces forever. No credit card required.
+        <p className="text-sm text-blue-100 font-medium">
+          Start learning from 500+ top rated courses today
         </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4 sm:px-0">
-        <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl py-8 px-6 sm:px-10 shadow-2xl backdrop-blur-xl space-y-6">
+        <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl text-slate-900 space-y-6">
           {successMsg ? (
-            <div className="p-6 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-center space-y-3">
-              <CheckCircle2 className="h-10 w-10 text-emerald-400 mx-auto" />
-              <h3 className="text-lg font-bold text-white">Account Created Successfully!</h3>
-              <p className="text-xs text-neutral-300">Redirecting to login portal...</p>
+            <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3">
+              <CheckCircle2 className="h-10 w-10 text-emerald-500 mx-auto" />
+              <h3 className="text-lg font-extrabold text-slate-900">Registration Successful!</h3>
+              <p className="text-xs text-slate-600 font-medium">Redirecting to login portal...</p>
             </div>
           ) : (
             <>
@@ -115,114 +116,109 @@ export default function SignupPage() {
               <div className="grid grid-cols-2 gap-3">
                 <button
                   type="button"
-                  onClick={() => alert("GitHub Signup Demo - Redirecting...")}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-neutral-800 border border-neutral-700 py-2.5 px-4 text-xs font-semibold text-neutral-200 hover:bg-neutral-750 hover:text-white transition-colors"
+                  onClick={() => alert("GitHub Signup")}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-slate-100 border border-slate-200 py-2.5 px-4 text-xs font-bold text-slate-700 hover:bg-slate-200 transition-colors"
                 >
-                  <Code2 className="h-4 w-4" />
+                  <Code2 className="h-4 w-4 text-slate-800" />
                   <span>GitHub</span>
                 </button>
                 <button
                   type="button"
-                  onClick={() => alert("Google Signup Demo - Redirecting...")}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-neutral-800 border border-neutral-700 py-2.5 px-4 text-xs font-semibold text-neutral-200 hover:bg-neutral-750 hover:text-white transition-colors"
+                  onClick={() => alert("Google Signup")}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-slate-100 border border-slate-200 py-2.5 px-4 text-xs font-bold text-slate-700 hover:bg-slate-200 transition-colors"
                 >
-                  <Sparkles className="h-4 w-4 text-amber-400" />
+                  <Sparkles className="h-4 w-4 text-amber-500" />
                   <span>Google</span>
                 </button>
               </div>
 
               <div className="relative flex items-center justify-center">
-                <div className="w-full border-t border-neutral-800" />
-                <span className="bg-neutral-900 px-3 text-xs font-medium text-neutral-500 uppercase">
+                <div className="w-full border-t border-slate-200" />
+                <span className="bg-white px-3 text-xs font-bold text-slate-400 uppercase">
                   Or register with email
                 </span>
               </div>
 
-              {/* Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                {/* Full Name */}
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                     Full Name
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                       <User className="h-4 w-4" />
                     </div>
                     <input
                       type="text"
                       {...register("fullName")}
                       placeholder="Abdul Mazed"
-                      className="w-full rounded-xl bg-neutral-950 border border-neutral-800 pl-10 pr-4 py-2.5 text-sm text-white placeholder-neutral-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-colors"
+                      className="w-full rounded-xl bg-slate-50 border border-slate-200 pl-10 pr-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0F52FF] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100 font-medium transition-colors"
                     />
                   </div>
                   {errors.fullName && (
-                    <p className="mt-1 text-xs text-rose-400 font-medium">{errors.fullName.message}</p>
+                    <p className="mt-1 text-xs text-rose-500 font-bold">{errors.fullName.message}</p>
                   )}
                 </div>
 
-                {/* Email Field */}
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
-                    Work Email
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Email Address
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                       <Mail className="h-4 w-4" />
                     </div>
                     <input
                       type="email"
                       {...register("email")}
-                      placeholder="abdul.mazed@company.com"
-                      className="w-full rounded-xl bg-neutral-950 border border-neutral-800 pl-10 pr-4 py-2.5 text-sm text-white placeholder-neutral-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-colors"
+                      placeholder="student@bytespace.com"
+                      className="w-full rounded-xl bg-slate-50 border border-slate-200 pl-10 pr-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0F52FF] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100 font-medium transition-colors"
                     />
                   </div>
                   {errors.email && (
-                    <p className="mt-1 text-xs text-rose-400 font-medium">{errors.email.message}</p>
+                    <p className="mt-1 text-xs text-rose-500 font-bold">{errors.email.message}</p>
                   )}
                 </div>
 
-                {/* Password Field */}
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                     Password
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                       <Lock className="h-4 w-4" />
                     </div>
                     <input
                       type={showPassword ? "text" : "password"}
                       {...register("password")}
                       placeholder="At least 8 characters"
-                      className="w-full rounded-xl bg-neutral-950 border border-neutral-800 pl-10 pr-10 py-2.5 text-sm text-white placeholder-neutral-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-colors"
+                      className="w-full rounded-xl bg-slate-50 border border-slate-200 pl-10 pr-10 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0F52FF] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100 font-medium transition-colors"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-500 hover:text-neutral-300"
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600"
                     >
                       {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                     </button>
                   </div>
 
-                  {/* Strength Bar */}
                   {passwordValue && (
                     <div className="mt-2 space-y-1">
-                      <div className="flex justify-between items-center text-[10px] text-neutral-400">
-                        <span>Password Strength:</span>
-                        <span className="font-semibold text-neutral-200">
+                      <div className="flex justify-between items-center text-[10px] font-bold text-slate-500">
+                        <span>Strength:</span>
+                        <span className="text-[#0F52FF]">
                           {strength < 66 ? "Weak" : strength < 100 ? "Good" : "Strong"}
                         </span>
                       </div>
-                      <div className="h-1.5 w-full bg-neutral-950 rounded-full overflow-hidden border border-neutral-800">
+                      <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden border border-slate-200">
                         <div
                           className={`h-full transition-all duration-300 ${
                             strength < 66
                               ? "bg-rose-500"
                               : strength < 100
                               ? "bg-amber-500"
-                              : "bg-emerald-500"
+                              : "bg-[#0F52FF]"
                           }`}
                           style={{ width: `${strength}%` }}
                         />
@@ -231,43 +227,39 @@ export default function SignupPage() {
                   )}
 
                   {errors.password && (
-                    <p className="mt-1 text-xs text-rose-400 font-medium">{errors.password.message}</p>
+                    <p className="mt-1 text-xs text-rose-500 font-bold">{errors.password.message}</p>
                   )}
                 </div>
 
-                {/* Terms Acceptance */}
                 <div className="flex items-start">
                   <input
                     id="terms"
                     type="checkbox"
                     {...register("termsAccepted")}
-                    className="mt-0.5 h-4 w-4 rounded bg-neutral-950 border-neutral-800 text-indigo-600 focus:ring-indigo-500"
+                    className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0F52FF] focus:ring-[#0F52FF]"
                   />
-                  <label htmlFor="terms" className="ml-2 text-xs text-neutral-300 leading-tight">
-                    I agree to the{" "}
-                    <a href="#" className="text-indigo-400 underline">Terms of Service</a> and{" "}
-                    <a href="#" className="text-indigo-400 underline">Privacy Policy</a>.
+                  <label htmlFor="terms" className="ml-2 text-xs font-bold text-slate-600 leading-tight">
+                    I agree to ByteSpace <a href="#" className="text-[#0F52FF] underline">Terms of Service</a> & <a href="#" className="text-[#0F52FF] underline">Privacy Policy</a>.
                   </label>
                 </div>
                 {errors.termsAccepted && (
-                  <p className="text-xs text-rose-400 font-medium">{errors.termsAccepted.message}</p>
+                  <p className="text-xs text-rose-500 font-bold">{errors.termsAccepted.message}</p>
                 )}
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 px-4 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 hover:from-indigo-500 hover:to-purple-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all disabled:opacity-50"
+                  className="w-full inline-flex items-center justify-center rounded-xl bg-[#0F52FF] py-3.5 px-4 text-sm font-extrabold text-white shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all disabled:opacity-50"
                 >
-                  {isSubmitting ? "Creating Account..." : "Create Account & Start Coding"}
+                  {isSubmitting ? "Creating Account..." : "Create Account & Start Learning"}
                 </button>
               </form>
             </>
           )}
 
-          <p className="text-center text-xs text-neutral-400">
+          <p className="text-center text-xs font-semibold text-slate-500">
             Already have an account?{" "}
-            <Link href="/login" className="font-bold text-indigo-400 hover:text-indigo-300">
+            <Link href="/login" className="font-extrabold text-[#0F52FF] hover:underline">
               Sign In
             </Link>
           </p>

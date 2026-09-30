@@ -2,17 +2,17 @@ import { STATS } from "@/constants/data";
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-neutral-800/80 bg-neutral-900/40 py-12 sm:py-16">
+    <section className="bg-white border-b border-slate-200 py-10 shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {STATS.map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center space-y-2 p-4">
-              <span className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
+            <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+              <div className="text-3xl sm:text-4xl font-black text-[#0F52FF] tracking-tight">
                 {stat.value}
-              </span>
-              <span className="text-xs sm:text-sm font-medium text-neutral-400">
+              </div>
+              <div className="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wider">
                 {stat.label}
-              </span>
+              </div>
             </div>
           ))}
         </div>

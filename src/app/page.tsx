@@ -2,26 +2,24 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/landing/HeroSection";
 import StatsSection from "@/components/landing/StatsSection";
-import FeaturesSection from "@/components/landing/FeaturesSection";
-import SolutionsSection from "@/components/landing/SolutionsSection";
-import PricingSection from "@/components/landing/PricingSection";
+import CoursesSection from "@/components/landing/CoursesSection";
+import WhyChooseUs from "@/components/landing/WhyChooseUs";
+import PromoBanner from "@/components/landing/PromoBanner";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
-import FaqSection from "@/components/landing/FaqSection";
-import CtaSection from "@/components/landing/CtaSection";
+import NewsletterSection from "@/components/landing/NewsletterSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-[#CAFF00] selection:text-[#0F52FF]">
       <Navbar />
       <main>
         <HeroSection />
         <StatsSection />
-        <FeaturesSection />
-        <SolutionsSection />
-        <PricingSection />
+        <CoursesSection />
+        <WhyChooseUs />
+        <PromoBanner />
         <TestimonialsSection />
-        <FaqSection />
-        <CtaSection />
+        <NewsletterSection />
       </main>
       <Footer />
     </div>

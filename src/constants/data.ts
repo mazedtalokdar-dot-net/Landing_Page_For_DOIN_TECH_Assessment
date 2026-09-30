@@ -1,205 +1,182 @@
 export const NAV_LINKS = [
-  { name: "Features", href: "#features" },
-  { name: "Solutions", href: "#solutions" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Home", href: "#" },
+  { name: "Courses", href: "#courses" },
+  { name: "Why Us", href: "#why-us" },
   { name: "Testimonials", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
-];
-
-export const COMPANY_LOGOS = [
-  { name: "Vercel", label: "VERCEL" },
-  { name: "Supabase", label: "SUPABASE" },
-  { name: "Stripe", label: "STRIPE" },
-  { name: "GitHub", label: "GITHUB" },
-  { name: "Tailwind", label: "TAILWIND" },
-  { name: "Docker", label: "DOCKER" },
+  { name: "Contact", href: "#footer" },
 ];
 
 export const STATS = [
-  { label: "Uptime SLA Guarantee", value: "99.99%" },
-  { label: "Global Latency", value: "< 10ms" },
-  { label: "Workspaces Created", value: "500K+" },
-  { label: "Active Developers", value: "85,000+" },
+  { value: "50K+", label: "Active Students" },
+  { value: "1,200+", label: "Expert Courses" },
+  { value: "4.9 ★", label: "Average Rating" },
+  { value: "98%", label: "Satisfaction Rate" },
+];
+
+export const CATEGORIES = [
+  "All Courses",
+  "Development",
+  "Design",
+  "Marketing",
+  "Business",
+  "Data Science",
+];
+
+export const COURSES = [
+  {
+    id: 1,
+    title: "Full-Stack Web Development Bootcamp 2026",
+    category: "Development",
+    rating: 4.9,
+    reviews: 1240,
+    instructor: "Sarah Jenkins",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120",
+    price: "$49.99",
+    oldPrice: "$99.99",
+    duration: "42 Hours",
+    lessons: "128 Lessons",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600",
+    badge: "Bestseller",
+  },
+  {
+    id: 2,
+    title: "UI/UX Design Masterclass: Wireframe to Prototype",
+    category: "Design",
+    rating: 4.8,
+    reviews: 980,
+    instructor: "Alex Rivera",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120",
+    price: "$39.99",
+    oldPrice: "$79.99",
+    duration: "28 Hours",
+    lessons: "86 Lessons",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+    badge: "Popular",
+  },
+  {
+    id: 3,
+    title: "Digital Marketing & SEO Growth Strategy",
+    category: "Marketing",
+    rating: 4.7,
+    reviews: 750,
+    instructor: "Emily Zhang",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120",
+    price: "$29.99",
+    oldPrice: "$59.99",
+    duration: "18 Hours",
+    lessons: "54 Lessons",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+    badge: "Trending",
+  },
+  {
+    id: 4,
+    title: "Python for Data Science & Machine Learning",
+    category: "Data Science",
+    rating: 4.9,
+    reviews: 1540,
+    instructor: "Dr. Michael Vance",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120",
+    price: "$54.99",
+    oldPrice: "$109.99",
+    duration: "56 Hours",
+    lessons: "164 Lessons",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+    badge: "Hot & New",
+  },
+  {
+    id: 5,
+    title: "Business Leadership & Financial Management",
+    category: "Business",
+    rating: 4.8,
+    reviews: 620,
+    instructor: "Robert Sterling",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120",
+    price: "$34.99",
+    oldPrice: "$69.99",
+    duration: "22 Hours",
+    lessons: "62 Lessons",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600",
+    badge: "Featured",
+  },
+  {
+    id: 6,
+    title: "Mobile App Development with React Native & Expo",
+    category: "Development",
+    rating: 4.9,
+    reviews: 890,
+    instructor: "David Miller",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=120",
+    price: "$44.99",
+    oldPrice: "$89.99",
+    duration: "35 Hours",
+    lessons: "110 Lessons",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600",
+    badge: "Top Rated",
+  },
 ];
 
 export const FEATURES = [
   {
-    icon: "Zap",
-    title: "Instant Environment Spin-up",
-    description: "Launch fully configured, isolated development environments in under 3 seconds with zero configuration.",
-    badge: "Lightning Fast",
+    icon: "GraduationCap",
+    title: "Expert Instructors",
+    description: "Learn directly from top industry professionals and experienced educators with real-world expertise.",
   },
   {
-    icon: "Bot",
-    title: "AI Pair Programmer",
-    description: "Integrated AI copilot that assists with code generation, bug fixing, test writing, and pull request reviews.",
-    badge: "AI Powered",
+    icon: "Clock",
+    title: "Flexible Lifetime Access",
+    description: "Study at your own pace anytime, anywhere. Enjoy lifetime access to course materials and updates.",
+  },
+  {
+    icon: "Award",
+    title: "Recognized Certifications",
+    description: "Earn shareable certificates of completion to boost your resume and LinkedIn profile.",
   },
   {
     icon: "Users",
-    title: "Real-time Collaboration",
-    description: "Work together seamlessly with multi-cursor live editing, shared terminal sessions, and built-in voice channels.",
-    badge: "Multiplayer",
-  },
-  {
-    icon: "ShieldCheck",
-    title: "Enterprise Grade Security",
-    description: "SOC2 Type II certified with end-to-end encryption, automated vulnerability scanning, and custom RBAC permissions.",
-    badge: "SOC2 Certified",
-  },
-  {
-    icon: "GitBranch",
-    title: "Automated CI/CD Integration",
-    description: "Connect your GitHub or GitLab repositories for instant preview deployments and automated test pipelines.",
-    badge: "DevOps Ready",
-  },
-  {
-    icon: "BarChart3",
-    title: "Cost & Resource Analytics",
-    description: "Track cloud resource usage, monitor idle environments, and automatically optimize compute spending.",
-    badge: "Smart Analytics",
-  },
-];
-
-export const SOLUTIONS = [
-  {
-    id: "frontend",
-    title: "Frontend Developers",
-    heading: "Blazing fast preview environments for React & Next.js",
-    description: "Spin up isolated preview links for every pull request with hot-module replacement and instant visual feedback.",
-    codeSnippet: `// Next.js App Router Preview Setup
-export default function Page() {
-  return (
-    <ByteSpaceContainer environment="production">
-      <LivePreview hmr={true} />
-    </ByteSpaceContainer>
-  );
-}`,
-  },
-  {
-    id: "backend",
-    title: "Backend & API Engineers",
-    heading: "Pre-configured databases and microservice clusters",
-    description: "Launch PostgreSQL, Redis, and API microservices with mock data seed scripts and container orchestration.",
-    codeSnippet: `// Docker Compose Stack Configuration
-services:
-  bytespace-api:
-    image: bytespace/backend:latest
-    environment:
-      - DB_URL=\${DATABASE_URL}
-      - REDIS_HOST=cache.bytespace.internal`,
-  },
-  {
-    id: "devops",
-    title: "DevOps & SRE Teams",
-    heading: "Infrastructure as Code with automated governance",
-    description: "Define workspaces via Terraform or YAML. Enforce security policies and compliance audits out-of-the-box.",
-    codeSnippet: `resource "bytespace_workspace" "prod_cluster" {
-  name        = "production-us-east"
-  region      = "us-east-1"
-  auto_scale  = true
-  max_nodes   = 32
-}`,
-  },
-];
-
-export const PRICING_PLANS = [
-  {
-    name: "Starter",
-    description: "Essential tools for individual developers and side projects.",
-    monthlyPrice: 0,
-    annualPrice: 0,
-    popular: false,
-    features: [
-      "Up to 3 active workspaces",
-      "2 vCPU & 4GB RAM per workspace",
-      "Community support",
-      "Standard cloud storage (10GB)",
-      "Public Git repository integrations",
-    ],
-    ctaText: "Get Started Free",
-    ctaHref: "/signup",
-  },
-  {
-    name: "Pro Developer",
-    description: "Advanced capabilities for professional developers & fast teams.",
-    monthlyPrice: 19,
-    annualPrice: 15,
-    popular: true,
-    features: [
-      "Unlimited active workspaces",
-      "8 vCPU & 16GB RAM per workspace",
-      "Priority 24/7 support",
-      "100GB NVMe cloud storage",
-      "Private Git repositories & SSO",
-      "AI Pair Programmer included",
-      "Real-time multiplayer editing",
-    ],
-    ctaText: "Start 14-Day Free Trial",
-    ctaHref: "/signup?plan=pro",
-  },
-  {
-    name: "Enterprise",
-    description: "Custom infrastructure, security SLAs, and dedicated account team.",
-    monthlyPrice: "Custom",
-    annualPrice: "Custom",
-    popular: false,
-    features: [
-      "Custom compute configuration",
-      "Dedicated isolated VPCs",
-      "99.99% Uptime SLA with financial backing",
-      "Custom SOC2 / HIPAA compliance",
-      "Dedicated Account Executive & Engineer",
-      "Audit logs & SAML SSO / Okta",
-    ],
-    ctaText: "Contact Sales",
-    ctaHref: "#contact",
+    title: "Interactive Community",
+    description: "Connect with thousands of peers, participate in Q&A discussions, and get direct mentor feedback.",
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    quote: "ByteSpace has transformed how our engineering team builds software. We reduced environment setup time from hours to 3 seconds.",
-    author: "Alex Rivera",
-    role: "VP of Engineering",
-    company: "TechScale Inc.",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+    quote: "ByteSpace completely transformed my career path! The Web Development bootcamp gave me the practical skills I needed to land a Frontend Engineer role within 3 months.",
+    author: "Jessica Taylor",
+    role: "Frontend Developer at TechCorp",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150",
+    rating: 5,
   },
   {
-    quote: "The real-time collaboration and AI code generation features saved our remote team over 15 hours every single week.",
-    author: "Sarah Chen",
-    role: "Lead Frontend Architect",
-    company: "CloudFlow",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200",
+    quote: "The quality of UI/UX courses on ByteSpace is unmatched. Clear explanations, practical hands-on projects, and fantastic instructor feedback!",
+    author: "Daniel Kim",
+    role: "Product Designer",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150",
+    rating: 5,
   },
   {
-    quote: "Deploying preview environments for every PR without touching Docker configs is a developer experience miracle.",
-    author: "David Miller",
-    role: "Senior DevOps Lead",
-    company: "DataSync",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+    quote: "As a busy professional, the flexible self-paced learning on ByteSpace fit perfectly into my schedule. Highly recommended for anyone upgrading their skills!",
+    author: "Elena Rostova",
+    role: "Marketing Strategist",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150",
+    rating: 5,
   },
 ];
 
 export const FAQS = [
   {
-    question: "What is ByteSpace and how does it work?",
-    answer: "ByteSpace is a cloud-based development platform that provisions instant, fully configured virtual development environments in the cloud, allowing developers to code, test, and collaborate from any browser or IDE.",
+    question: "How do I get started with a course on ByteSpace?",
+    answer: "Simply create a free account, browse our catalog, and click 'Enroll Now' on any course of your choice. You will get immediate access to all video lessons and resources.",
   },
   {
-    question: "Can I connect my existing GitHub / GitLab repositories?",
-    answer: "Yes! ByteSpace seamlessly integrates with GitHub, GitLab, and Bitbucket. You can launch a workspace directly from any repository or pull request with a single click.",
+    question: "Do I get a certificate upon course completion?",
+    answer: "Yes! Every completed course includes an official digital Certificate of Completion that you can download or directly share on your LinkedIn profile.",
   },
   {
-    question: "Is there a free tier available?",
-    answer: "Absolutely. Our Starter plan is 100% free forever and includes 3 active workspaces with 2 vCPU and 4GB RAM per workspace.",
+    question: "Can I access course materials on mobile devices?",
+    answer: "Absolutely. ByteSpace is fully responsive across desktop, tablet, and mobile devices so you can learn on the go.",
   },
   {
-    question: "How secure is my code on ByteSpace?",
-    answer: "Security is our top priority. ByteSpace is SOC2 Type II and ISO 27001 certified. All workspaces run in isolated containers with end-to-end encrypted storage and network isolation.",
-  },
-  {
-    question: "Can I customize the RAM and vCPU specs for my project?",
-    answer: "Yes, Pro and Enterprise plans allow you to customize compute specifications up to 64 vCPU and 128GB RAM per workspace for demanding workloads.",
+    question: "What is the refund policy?",
+    answer: "We offer a 30-day money-back guarantee for all course purchases. If you're not satisfied, request a full refund with no questions asked.",
   },
 ];
