@@ -15,6 +15,7 @@ export default function PromoBanner() {
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
                 alt="Student learning"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>

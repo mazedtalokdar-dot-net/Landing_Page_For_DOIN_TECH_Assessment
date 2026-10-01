@@ -95,6 +95,7 @@ export default function HeroSection() {
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
                 alt="Student learning online"
                 fill
+                unoptimized
                 className="object-cover"
                 priority
               />

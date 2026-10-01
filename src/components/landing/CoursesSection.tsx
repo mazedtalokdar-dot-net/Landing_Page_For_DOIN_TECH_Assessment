@@ -59,6 +59,7 @@ export default function CoursesSection() {
                   src={course.image}
                   alt={course.title}
                   fill
+                  unoptimized
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3 bg-[#0F52FF] text-white text-xs font-extrabold px-3 py-1 rounded-lg shadow">
@@ -103,6 +104,7 @@ export default function CoursesSection() {
                       alt={course.instructor}
                       width={36}
                       height={36}
+                      unoptimized
                       className="rounded-full object-cover border border-slate-200"
                     />
                     <span className="text-xs font-bold text-slate-700">{course.instructor}</span>

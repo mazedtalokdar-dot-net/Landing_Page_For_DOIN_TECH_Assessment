@@ -39,6 +39,7 @@ export default function TestimonialsSection() {
                   alt={t.author}
                   width={44}
                   height={44}
+                  unoptimized
                   className="rounded-full object-cover border border-slate-200"
                 />
                 <div>
